@@ -1,0 +1,219 @@
+/*Body*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+
+    background-color: #333;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/*Header*/
+
+header {
+    background-color: #222;
+    padding: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-size: 2.8em;
+    font-weight: 200;
+    cursor: pointer;
+}
+    
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav a {
+    margin-right: 1.3em;
+    font-size: 2.0em;
+}
+
+header h1, a {
+    color: #00ce90;
+    transition: 0.3s ease-in-out;
+}
+header a:hover, h1:hover {
+    color: #fff;
+}
+
+/*Main*/
+
+main {
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content h2 {
+    margin-bottom: 2%;
+    font-size: 2.2em;
+}
+
+.text {
+    margin-bottom: 10%;
+}
+
+.text p {
+    width: 80%;
+    font-size: 1.2em;
+    font-weight: 300;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/*Cards*/
+
+.cards-container {
+    display: flex;
+    align-items: center;
+}
+
+.cards {
+    width: 120px;
+    height: 120px;
+    padding: 10px;
+    background-color: #eee;
+    border-radius: 8px;
+    margin-right: 0.9em;
+    margin-left: 0.9em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow 0.25s ease-in-out;
+}
+
+.cards img {
+    width: 90%;
+}
+
+.cards:hover {
+    box-shadow: 0px 0px 8px #00ce90;
+}
+
+/*Imagem*/
+main figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+figure img {
+    width: 450px;
+    height: 450px;
+    border-radius: 225px;
+    margin-bottom: 6%;
+    border: 1px #00ce90 solid;
+    transition: 0.2s ease-in-out;
+    margin-right: 60px;
+}
+
+figure img:hover {
+    box-shadow: 0px 0px 8px #00ce90;
+}
+
+
+/*Footer*/
+
+footer {
+    background-color: #222;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer span {
+    font-size: 1em;
+    font-weight: 200;
+}
+
+/*Media*/
+
+@media (max-width: 1200px) {
+    main {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .main-content {
+        width: 100%;
+        align-items: center;
+        margin-bottom: 15%;
+    }
+    .text, .techs {
+        text-align: center;
+    }
+    .text p {
+        width: 100%;
+        font-size: 0.9em;
+    }
+    .cards-container, .text p{
+        margin-top: 32px;
+    }
+    figure img {
+        margin-right: 0;
+    }
+}
+
+@media (max-width:700px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    header h1 {
+        font-size: 2em;
+    }
+    nav {
+        margin-top: 24px;
+    }
+    nav a {
+        font-size: 0.8em;
+    }
+    .cards{
+        width: 60px;
+        height: 60px;
+    }
+
+    .text h2, .techs h2 {
+        font-size: 1.8em;
+    }
+    figure img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
